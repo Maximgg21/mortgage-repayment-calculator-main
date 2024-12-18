@@ -1,0 +1,193 @@
+.mortgage-calculator {
+    padding: 2em;
+    width: auto;
+}
+
+.mortgage-calculator h1 {
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 700;
+    color: var(--slate900)
+}
+
+.mortgage-calculator header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1.5em;
+}
+
+.mortgage-calculator .clear-btn {
+    all: unset;
+    text-decoration: underline;
+    color: var(--slate500);
+}
+
+.mortgage-calculator .clear-btn:hover {
+    color: var(--slate700);
+}
+
+.mortgage-calculator .input-description {
+    color: var(--slate700);
+    margin: 1em 0 0.3em;
+    font-size: 0.95rem;
+}
+
+.mortgage-calculator .input-block {
+    border: 1px solid var(--slate300);
+    border-top-color: var(--slate700);
+    border-radius: 5px;
+    display: flex;
+    width: 100%;
+}
+
+.mortgage-calculator .input-block:hover {
+    border-color: var(--slate500);
+    border-top-color: var(--slate900);
+}
+
+.mortgage-calculator .input-block.error {
+    border-color: var(--red);
+    border-width: 1.5px;
+}
+
+.mortgage-calculator .input-sign {
+    background-color: var(--slate100);
+    color: var(--slate500);
+    padding: 0.7em 1em;
+    display: grid;
+    place-content: center;
+}
+
+.mortgage-calculator .input-sign.error {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.mortgage-calculator input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0.3em 0.8em;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.mortgage-calculator .two-inputs-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1em;
+}
+
+.mortgage-calculator .two-inputs-block .input-block {
+    flex-direction: row-reverse;
+}
+
+.mortgage-calculator .radio-input {
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 1.2em;
+    padding: 0.5em;
+    margin: 0.5em 0;
+    border-radius: 0.3em;
+    border: 1px solid var(--slate500);
+}
+
+.mortgage-calculator .radio-input:hover {
+    border-color: var(--lime);
+}
+
+.mortgage-calculator input[type="radio"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: var(--slate300);
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid var(--slate300);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+} 
+
+.mortgage-calculator input[type="radio"]:checked {
+    border-color: var(--lime);
+}
+
+.mortgage-calculator input[type="radio"]::before {
+    content: "";
+    width: 0.55em;
+    height: 0.55em;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--lime);
+}
+
+.mortgage-calculator input[type="radio"]:checked::before {
+    transform: scale(1);
+}
+
+.mortgage-calculator .radio-input:has(input[type="radio"]:checked) {
+    background-color: var(--fadedLime);
+    border-color: var(--lime);
+}
+
+.mortgage-calculator form button {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    margin-top: 2em;
+    padding: 1em 1.5em;
+    background: var(--lime);
+    border: none;
+    border-radius: 2em;
+    font-size: 1em;
+    color: var(--slate900);
+    font-weight: 700;
+}
+
+.mortgage-calculator form button:hover {
+    opacity: 0.8;
+}
+
+.mortgage-calculator .error-message {
+    color: red;
+    margin: 0.5em 0 0;
+    font-size: 0.8rem;
+}
+
+@media only screen and (max-width: 834px) {
+    .mortgage-calculator header {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .mortgage-calculator .clear-btn {
+        font-size: 0.8rem;
+    }
+
+    .mortgage-calculator .input-sign {
+        font-size: 0.8rem;
+    }
+
+    .mortgage-calculator .radio-input  {
+        font-size: 1rem;
+        padding-left: 1em;
+    }
+
+    .mortgage-calculator form button {
+        font-size: 1rem;
+        margin: 1em auto;
+    }
+
+    
+}

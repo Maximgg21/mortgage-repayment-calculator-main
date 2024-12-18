@@ -1,0 +1,72 @@
+.calculation-results {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+    background: var(--slate800);
+    color: var(--white);
+    padding: 2em;
+    text-align: center;
+    color: var(--slate300);
+    border-bottom-left-radius: 15%;
+}
+
+.calculation-results h1,
+.total-repayment {
+    font-size: 1.5rem;
+    color: var(--white);
+    margin: 0;
+}
+
+.calculation-results .result-numbers {
+    background: var(--slate900);
+    padding: 0 1.5em 1.5em;
+    border-top: 0.3em solid var(--lime); 
+    border-radius: 10px;
+    margin-top: 1.5em;
+}
+
+.calculation-results p {
+    margin: 1em 0 0.5em;
+}
+
+.calculation-results .monthly-repayment {
+    color: var(--lime);
+    font-size: 3rem;
+    margin: 0.15em 0;
+}
+
+.calculation-results hr {
+    border-color: var(--slate700);
+    margin: 1em 0;
+}
+
+@media only screen and (max-width: 834px) {
+    .calculation-results {
+        border-radius: 0;
+    }
+
+    .calculation-results .results-img {
+        width: 50vw;
+    }
+
+    .calculation-results h1,
+    .total-repayment {
+        font-size: 1.3rem;
+    }
+
+    .calculation-results p {
+        font-size: 0.8rem;
+        margin-bottom: 1.3em;
+    }
+
+    .calculation-results .result-numbers {
+        border-width: 5px;
+    }
+
+    .calculation-results .monthly-repayment {
+        margin-top: -0.3em;
+    }
+}

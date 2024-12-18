@@ -1,0 +1,42 @@
+body {
+    background: hsl(202, 86%, 94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Plus jakarta Sans", serif;
+    font-weight: 500;
+    margin: 1em;
+}
+
+.main-box {
+    background: white;
+    border-radius: 2em;
+    width: 65vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    body {
+        font-size: 8px;
+    }
+}
+
+@media only screen and (max-width: 834px) {
+    .body { 
+        margin: 0;
+    }
+
+    .main-box {
+        grid-template-columns: auto;
+        width: auto;
+        border-radius: 0;
+    }
+}
