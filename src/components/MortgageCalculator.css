@@ -39,6 +39,7 @@
     border-radius: 5px;
     display: flex;
     width: 100%;
+    overflow: hidden;
 }
 
 .mortgage-calculator .input-block:hover {
